@@ -1,28 +1,16 @@
 (function ($) {
-    $(window).load(function () {
-        // Run code
-    });
 
     $(document).ready(function () {
 
         var ta = document.querySelector('.gfs_short_p textarea');
 
-        //ta.style.display = 'none';
         autosize(ta);
         $(ta).attr('rows', '1');
-        //$('.gfs_sub_field textarea').css({'height':'auto'});
-        //ta.style.display = 'block';
         autosize.update(ta);
 
-        //$('.gfs_sub_field textarea').attr('rows','1');
-        //$('.gfs_sub_field textarea').css({'height':'40px'});
         $(document).on('focus', '.gfs_short_p textarea', function () {
-            $(this).attr('rows', '1');//.css({'height':'40px'});
-            //$(this).css({'height':'40px'});
+            $(this).attr('rows', '1');
             autosize($(this));
-            console.log(ta);
-            //ta.style.display = 'block';
-            //autosize.update(ta);
         });
 
         /* - animation*/
