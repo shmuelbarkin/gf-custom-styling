@@ -302,7 +302,7 @@ body .gform_wrapper .ginput_container_date input {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
-    background-image: url(images/select-arrow.svg);
+    background-image: url(../images/select-arrow.svg);
     background-repeat: no-repeat;
     background-position: 96% 50%;
 }
@@ -317,7 +317,7 @@ body .gform_wrapper select {
 
 body .gform_wrapper .ginput_container_date input:hover {
     cursor: pointer;
-    background-image: url(images/select-arrow-dark.svg);
+    background-image: url(../images/select-arrow-dark.svg);
 }
 
 body .gform_wrapper .ginput_container_date input::-webkit-input-placeholder {
@@ -350,7 +350,7 @@ body .gform_wrapper .gform_footer input[type=submit],
 body .gform_wrapper .gform_page_footer input.button,
 body .gform_wrapper .gform_page_footer input[type=submit] {
     color: #ffffff;
-    background-image: url(images/arrow-right.svg);
+    background-image: url(../images/arrow-right.svg);
     background-color: #007dc3;
     background-repeat: no-repeat;
     background-position: 50% 55%;
@@ -375,14 +375,14 @@ body .gform_wrapper .gform_page_footer input[type=submit]:hover {
     padding-right: 2em !important;
     /*box-shadow: 0 0 0 2px #007dc3;*/
     background-position: 90% 50%;
-    background-image: url(images/arrow-right-white.svg);
+    background-image: url(../images/arrow-right-white.svg);
 }
 
 body .gform_wrapper .gform_footer input.button.gform_previous_button,
 body .gform_wrapper .gform_footer input[type=submit].gform_previous_button,
 body .gform_wrapper .gform_page_footer input.button.gform_previous_button,
 body .gform_wrapper .gform_page_footer input[type=submit].gform_previous_button {
-    background-image: url(images/arrow-left.svg);
+    background-image: url(../images/arrow-left.svg);
 }
 
 body .gform_wrapper .gform_footer input.button.gform_previous_button:hover,
@@ -392,7 +392,7 @@ body .gform_wrapper .gform_page_footer input[type=submit].gform_previous_button:
     padding-right: 0.7em !important;
     padding-left: 2em !important;
     background-position: 10% 50%;
-    background-image: url(images/arrow-left-white.svg);
+    background-image: url(../images/arrow-left-white.svg);
 }
 
 body .gform_wrapper .ginput_container_radio input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
@@ -467,7 +467,7 @@ body .gform_wrapper .gfield_checkbox li label:after {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 20px 20px;
-    background-image: url(images/check.svg);
+    background-image: url(../images/check.svg);
     opacity: 0;
     width: 20px;
     height: 20px;
