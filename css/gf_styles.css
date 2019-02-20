@@ -302,9 +302,7 @@ body .gform_wrapper .ginput_container_date input {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
-    background-image: url(../images/select-arrow.svg);
-    background-repeat: no-repeat;
-    background-position: 96% 50%;
+    background: url(../images/select-arrow.svg) no-repeat 96% 50%;
 }
 
 body .gform_wrapper select::-ms-expand {
@@ -350,10 +348,7 @@ body .gform_wrapper .gform_footer input[type=submit],
 body .gform_wrapper .gform_page_footer input.button,
 body .gform_wrapper .gform_page_footer input[type=submit] {
     color: #ffffff;
-    background-image: url(../images/arrow-right.svg);
-    background-color: #007dc3;
-    background-repeat: no-repeat;
-    background-position: 50% 55%;
+    background: #007dc3 url(../images/arrow-right.svg) no-repeat 50% 55%;
     font-size: 20px;
     border: none;
     padding: 0 1em !important;
@@ -374,8 +369,7 @@ body .gform_wrapper .gform_page_footer input[type=submit]:hover {
     padding-left: 0.7em !important;
     padding-right: 2em !important;
     /*box-shadow: 0 0 0 2px #007dc3;*/
-    background-position: 90% 50%;
-    background-image: url(../images/arrow-right-white.svg);
+    background: url(../images/arrow-right-white.svg) 90% 50%;
 }
 
 body .gform_wrapper .gform_footer input.button.gform_previous_button,
@@ -391,8 +385,7 @@ body .gform_wrapper .gform_page_footer input.button.gform_previous_button:hover,
 body .gform_wrapper .gform_page_footer input[type=submit].gform_previous_button:hover {
     padding-right: 0.7em !important;
     padding-left: 2em !important;
-    background-position: 10% 50%;
-    background-image: url(../images/arrow-left-white.svg);
+    background: url(../images/arrow-left-white.svg) 10% 50%;
 }
 
 body .gform_wrapper .ginput_container_radio input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) {
@@ -464,10 +457,8 @@ body .gform_wrapper ul.gfield_radio li label:before {
 }
 
 body .gform_wrapper .gfield_checkbox li label:after {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
     background-size: 20px 20px;
-    background-image: url(../images/check.svg);
+    background: url(../images/check.svg) no-repeat 50% 50%;
     opacity: 0;
     width: 20px;
     height: 20px;
