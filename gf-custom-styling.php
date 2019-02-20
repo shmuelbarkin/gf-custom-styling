@@ -22,3 +22,5 @@ function load_gravity_forms_css()
 }
 
 add_action('wp_enqueue_scripts', 'load_gravity_forms_css');
+
+?>
