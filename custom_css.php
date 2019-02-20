@@ -8,6 +8,11 @@ Author: Alex Patsyk & Shmuel Barkin
 Author URI: https://sbarkin.com
 */
 
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
 function load_gravity_forms_css()
 {
     wp_enqueue_style('custom-gravity-styles', plugin_dir_url(__FILE__) . 'gf_styles.css');
