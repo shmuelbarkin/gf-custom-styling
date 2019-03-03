@@ -27,10 +27,10 @@ if( !function_exists("extra_styling_menu") )
     $icon_url   = 'dashicons-media-code';
 
     add_menu_page( $page_title,
-                   $menu_title, 
-                   $capability, 
-                   $menu_slug, 
-                   $function, 
+                   $menu_title,
+                   $capability,
+                   $menu_slug,
+                   $function,
                    $icon_url);
     add_action( 'admin_init', 'update_extra_styling' );
   }
@@ -48,7 +48,7 @@ if( !function_exists("extra_styling_page") )
         <tr valign="top">
           <td>Font color:</td>
           <td>
-            <input type="text" name="font_color" value="<?php echo get_option('font_color'); ?>"/>
+            <input type="text" size="50" name="font_color" value="<?php echo get_option('font_color'); ?>"/>
             <em>Accepts values: 'red' or '#458692'</em>
           </td>
         </tr>
@@ -56,7 +56,7 @@ if( !function_exists("extra_styling_page") )
         <tr valign="top">
           <td >Font family url:</td>
           <td>
-            <input type="text" name="font_family_url" value="<?php echo get_option('font_family_url'); ?>"/>
+            <input type="text" size="50" name="font_family_url" value="<?php echo get_option('font_family_url'); ?>"/>
             <em>Accepts url: 'https://fonts.googleapis.com/css?family=Lato'</em>
           </td>
         </tr>
@@ -64,7 +64,7 @@ if( !function_exists("extra_styling_page") )
         <tr valign="top">
           <td >Font family name:</td>
           <td>
-            <input type="text" name="font_family_name" value="<?php echo get_option('font_family_name'); ?>"/>
+            <input type="text" size="50" name="font_family_name" value="<?php echo get_option('font_family_name'); ?>"/>
             <em>Accepts font name: eg. 'Lato'</em>
           </td>
         </tr>
@@ -92,9 +92,11 @@ function load_gravity_forms_css() {
   $color = get_option('font_color');
   $font_family_url = get_option('font_family_url');
   $font_family_name = get_option('font_family_name');
+	$arrow_right = plugin_dir_url(__FILE__) . 'images/arrow-right.svg';
+	$arrow_right_white = plugin_dir_url(__FILE__) . 'images/arrow-right-white.svg';
   $custom_css = "
     @import url('{$font_family_url}');
-    
+
     /* General styles for fields */
     body .gform_wrapper {
       font-family: {$font_family_name}, Helvetica, Arial, sans-serif;
@@ -130,7 +132,7 @@ function load_gravity_forms_css() {
     body .gform_wrapper .gform_page_footer input.button,
     body .gform_wrapper .gform_page_footer input[type=submit] {
       color: #ffffff;
-      background: {$color} url(../images/arrow-right.svg) no-repeat 50% 55%;
+      background: {$color} url({$arrow_right}) no-repeat 50% 55%;
       font-size: 20px;
       border: none;
       padding: 0 1em !important;
@@ -151,7 +153,7 @@ function load_gravity_forms_css() {
       padding-left: 0.7em !important;
       padding-right: 2em !important;
       /*box-shadow: 0 0 0 2px {$color};*/
-      background: url(../images/arrow-right-white.svg) 90% 50%;
+      background: {$color} url({$arrow_right_white}) no-repeat 90% 50%;
     }
 
     body .gform_wrapper ul.gfield_radio li label:after {
@@ -165,6 +167,7 @@ function load_gravity_forms_css() {
     }
   ";
   wp_add_inline_style( 'custom-gravity-styles', $custom_css );
+	wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'script-autosize', plugin_dir_url(__FILE__) . '/js/autosize.js', 'jquery' );
   wp_enqueue_script( 'script-custom', plugin_dir_url(__FILE__) . '/js/main.js', 'jquery' );
 
