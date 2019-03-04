@@ -3,14 +3,14 @@
 Plugin Name: SB Custom Gravity Forms Styles
 Plugin URI: https://sbarkin.com
 Description: Adds awesome styling to gravity forms
-Version: 1.4.0
+Version: 1.5.0
 Author: Alex Patsyk & Shmuel Barkin
 Author URI: https://sbarkin.com
 */
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
-	die;
+    die;
 }
 
 add_action( 'admin_menu', 'extra_styling_menu' );
@@ -141,5 +141,3 @@ function load_gravity_forms_css() {
 
 }
 add_action( 'wp_enqueue_scripts', 'load_gravity_forms_css' );
-
-?>
