@@ -348,7 +348,7 @@ body .gform_wrapper .gform_footer input[type=submit],
 body .gform_wrapper .gform_page_footer input.button,
 body .gform_wrapper .gform_page_footer input[type=submit] {
     color: #ffffff;
-    background: #007dc3 url(../images/arrow-right.svg) no-repeat 50% 55%;
+    background: #007dc3 no-repeat 50% 55%;
     font-size: 20px;
     border: none;
     padding: 0 1em !important;
@@ -372,12 +372,12 @@ body .gform_wrapper .gform_page_footer input[type=submit]:hover {
     background: url(../images/arrow-right-white.svg) 90% 50%;
 }
 
-body .gform_wrapper .gform_footer input.button.gform_previous_button,
+/*body .gform_wrapper .gform_footer input.button.gform_previous_button,
 body .gform_wrapper .gform_footer input[type=submit].gform_previous_button,
 body .gform_wrapper .gform_page_footer input.button.gform_previous_button,
 body .gform_wrapper .gform_page_footer input[type=submit].gform_previous_button {
     background-image: url(../images/arrow-left.svg);
-}
+}*/
 
 body .gform_wrapper .gform_footer input.button.gform_previous_button:hover,
 body .gform_wrapper .gform_footer input[type=submit].gform_previous_button:hover,
@@ -457,13 +457,15 @@ body .gform_wrapper ul.gfield_radio li label:before {
 }
 
 body .gform_wrapper .gfield_checkbox li label:after {
-    background-size: 20px 20px;
-    background: url(../images/check.svg) no-repeat 50% 50%;
+    content: '\2713';
+    /*background-size: 20px 20px;*/
+    /*background: url(../images/check.svg) no-repeat 50% 50%;*/
+    font-size: 1.4em;
     opacity: 0;
     width: 20px;
     height: 20px;
-    top: 0;
-    /*top: -3px;*/
+    /*top: 0;*/
+    top: -6px;
 }
 
 body .gform_wrapper .gfield_checkbox li input:checked + label:after,

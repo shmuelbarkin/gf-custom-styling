@@ -94,6 +94,7 @@ function load_gravity_forms_css() {
   $font_family_name = get_option('font_family_name');
 	$arrow_right = plugin_dir_url(__FILE__) . 'images/arrow-right.svg';
 	$arrow_right_white = plugin_dir_url(__FILE__) . 'images/arrow-right-white.svg';
+	$check = "\2042";
   $custom_css = "
     @import url('{$font_family_url}');
 
@@ -165,6 +166,11 @@ function load_gravity_forms_css() {
       background: {$color};
       opacity: 0;
     }
+
+		body .gform_wrapper .gfield_checkbox li label:after {
+				color: {$color};
+		}
+
   ";
   wp_add_inline_style( 'custom-gravity-styles', $custom_css );
 	wp_enqueue_script( 'jquery' );
