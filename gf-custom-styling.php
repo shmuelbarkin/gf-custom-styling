@@ -92,8 +92,6 @@ function load_gravity_forms_css() {
   $color = get_option('font_color');
   $font_family_url = get_option('font_family_url');
   $font_family_name = get_option('font_family_name');
-	$arrow_right = plugin_dir_url(__FILE__) . 'images/arrow-right.svg';
-	$arrow_right_white = plugin_dir_url(__FILE__) . 'images/arrow-right-white.svg';
 	$check = "\2042";
   $custom_css = "
     @import url('{$font_family_url}');
@@ -102,20 +100,9 @@ function load_gravity_forms_css() {
     body .gform_wrapper {
       font-family: {$font_family_name}, Helvetica, Arial, sans-serif;
     }
-
-    body .gform_wrapper .gform_heading,
-    body .gform_wrapper .gform_footer {
-      /*padding-left: 17px;*/
-      padding-right: 17px;
-    }
-
     body .gform_wrapper .gform_heading h3 {
       font-family: {$font_family_name}, Helvetica, Arial, sans-serif;
-      font-size: 34px;
-      color: #222;
-      font-weight: 400;
     }
-
     body .gform_wrapper input[type=text]:focus,
     body .gform_wrapper input[type=password]:focus,
     body .gform_wrapper input[type=tel]:focus,
@@ -127,50 +114,25 @@ function load_gravity_forms_css() {
       box-shadow: 0 2px 0 {$color} !important;
       border-color: {$color} !important;
     }
-
     body .gform_wrapper .gform_footer input.button,
     body .gform_wrapper .gform_footer input[type=submit],
     body .gform_wrapper .gform_page_footer input.button,
     body .gform_wrapper .gform_page_footer input[type=submit] {
-      color: #ffffff;
-      background: {$color} url({$arrow_right}) no-repeat 50% 55%;
-      font-size: 20px;
-      border: none;
-      padding: 0 1em !important;
-      line-height: 45px;
-      height: 45px;
-      border-radius: 2px;
-      cursor: pointer;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-      position: relative;
+      background-color: {$color};
     }
-
     body .gform_wrapper .gform_footer input.button:hover,
     body .gform_wrapper .gform_footer input[type=submit]:hover,
     body .gform_wrapper .gform_page_footer input.button:hover,
     body .gform_wrapper .gform_page_footer input[type=submit]:hover {
-      padding-left: 0.7em !important;
-      padding-right: 2em !important;
       /*box-shadow: 0 0 0 2px {$color};*/
-      background: {$color} url({$arrow_right_white}) no-repeat 90% 50%;
+      background-color: {$color};
     }
-
     body .gform_wrapper ul.gfield_radio li label:after {
-      width: 7px;
-      height: 7px;
-      left: 4px;
-      top: 9px;
-      border-radius: 4px;
       background: {$color};
-      opacity: 0;
     }
-
 		body .gform_wrapper .gfield_checkbox li label:after {
 				color: {$color};
 		}
-
   ";
   wp_add_inline_style( 'custom-gravity-styles', $custom_css );
 	wp_enqueue_script( 'jquery' );
