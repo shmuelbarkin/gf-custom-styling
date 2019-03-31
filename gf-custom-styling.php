@@ -3,7 +3,7 @@
 Plugin Name: SB Custom Gravity Forms Styles
 Plugin URI: https://sbarkin.com
 Description: Adds awesome styling to gravity forms
-Version: 1.5.0
+Version: 2.0.0
 Author: Alex Patsyk & Shmuel Barkin
 Author URI: https://sbarkin.com
 */
@@ -24,7 +24,7 @@ if( !function_exists("extra_styling_menu") )
     $capability = 'manage_options';
     $menu_slug  = 'extra-styling';
     $function   = 'extra_styling_page';
-    $icon_url   = 'dashicons-media-code';
+    $icon_url   = 'dashicons-admin-customizer';
 
     add_menu_page( $page_title,
                    $menu_title,
@@ -46,18 +46,18 @@ if( !function_exists("extra_styling_page") )
       <?php do_settings_sections( 'extra-styling-settings' ); ?>
       <table class="form-table">
         <tr valign="top">
-          <td>Font color:</td>
+          <td>Font color</td>
           <td>
             <input type="text" size="50" name="font_color" value="<?php echo get_option('font_color'); ?>"/>
-            <em>Accepts values: 'red' or '#458692'</em>
+            <em>Accepts a Color Name (e.g. 'red') or Hex Color Code (e.g. '#458692')</em>
           </td>
         </tr>
         <tr valign="top">
-          <td >Font family name:</td>
+          <td >Font family name</td>
           <td>
             <input type="text" id="family_name" size="50" name="font_family_name" value="<?php echo get_option('font_family_name'); ?>"/>
             <input type="hidden" id="font_family_url" size="50" name="font_family_url" value="<?php echo get_option('font_family_url'); ?>"/>
-            <em>Accepts font name: eg. 'Lato'</em>
+            <em>Accepts any <a href="https://fonts.google.com/" target="_blank">Google font</a> name: eg. 'Lato'.</em>
           </td>
         </tr>
       </table>
