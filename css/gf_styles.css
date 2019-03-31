@@ -353,7 +353,7 @@ body .gform_wrapper .gform_page_footer input[type=submit] {
     color: #ffffff;
     background-color: #007dc3;
     background-repeat: no-repeat;
-    background-position: 50% 55%;
+    background-position: 90% 50%;
     font-size: 20px;
     border: none;
     padding: 0 1em !important;
@@ -375,7 +375,7 @@ body .gform_wrapper .gform_page_footer input[type=submit]:hover {
     padding-right: 2em !important;
     /*box-shadow: 0 0 0 2px #007dc3;*/
     background-image: url(../images/arrow-right-white.svg);
-    background-position: 90% 50%;
+    /*background-position: 90% 50%;*/ 
 }
 
 /*body .gform_wrapper .gform_footer input.button.gform_previous_button,
