@@ -20,8 +20,7 @@
             });
         });
 
-        $('.gform_wrapper .ginput_container_radio input[type="text"]').before("<label class='other-label'></label>");
-
+        $('.gform_wrapper .ginput_container_radio input[type="text"]').before("<label class='other-label'></label>");        
     });/* end of jQuery document ready */
 
 })(jQuery);

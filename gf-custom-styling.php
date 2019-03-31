@@ -52,24 +52,18 @@ if( !function_exists("extra_styling_page") )
             <em>Accepts values: 'red' or '#458692'</em>
           </td>
         </tr>
-
-        <tr valign="top">
-          <td >Font family url:</td>
-          <td>
-            <input type="text" size="50" name="font_family_url" value="<?php echo get_option('font_family_url'); ?>"/>
-            <em>Accepts url: 'https://fonts.googleapis.com/css?family=Lato'</em>
-          </td>
-        </tr>
-
         <tr valign="top">
           <td >Font family name:</td>
           <td>
-            <input type="text" size="50" name="font_family_name" value="<?php echo get_option('font_family_name'); ?>"/>
+            <input type="text" id="family_name" size="50" name="font_family_name" value="<?php echo get_option('font_family_name'); ?>"/>
+            <input type="hidden" id="font_family_url" size="50" name="font_family_url" value="<?php echo get_option('font_family_url'); ?>"/>
             <em>Accepts font name: eg. 'Lato'</em>
           </td>
         </tr>
       </table>
-      <?php submit_button(); ?>
+      <p class="submit">
+        <input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes">
+      </p>
     </form>
 
   <?php
@@ -141,3 +135,9 @@ function load_gravity_forms_css() {
 
 }
 add_action( 'wp_enqueue_scripts', 'load_gravity_forms_css' );
+
+function admin_scrips($hook) {
+    wp_enqueue_script('admin', plugin_dir_url(__FILE__) . '/js/admin.js');
+}
+
+add_action('admin_enqueue_scripts', 'admin_scrips');
