@@ -46,7 +46,7 @@ if( !function_exists("extra_styling_page") )
       <?php do_settings_sections( 'extra-styling-settings' ); ?>
       <table class="form-table">
         <tr valign="top">
-          <td>Font color</td>
+          <td>Theme color</td>
           <td>
             <input type="text" size="50" name="font_color" value="<?php echo get_option('font_color'); ?>"/>
             <em>Accepts a Color Name (e.g. 'red') or Hex Color Code (e.g. '#458692')</em>
